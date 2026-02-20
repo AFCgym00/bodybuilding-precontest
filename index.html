@@ -1,1 +1,59 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AFC | Pre-Contest Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <img src="assets/logo.png" alt="AFC Logo" class="logo">
+                <h1>PRE-CONTEST PEAK</h1>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="animation-box">
+            <lottie-player src="assets/muscle.json" background="transparent" speed="1" style="width: 200px; height: 200px;" loop autoplay></lottie-player>
+            <h2>Conditioning Status: <span id="status-text">Loading...</span></h2>
+        </section>
+
+        <section class="grid">
+            <div class="card">
+                <h3>Macro & Water Calculator</h3>
+                <div class="input-group">
+                    <label>Current Weight (kg)</label>
+                    <input type="number" id="weight" placeholder="e.g. 85">
+                </div>
+                <div class="input-group">
+                    <label>Days to Show</label>
+                    <input type="number" id="days" placeholder="e.g. 7">
+                </div>
+                <button onclick="calculatePlan()">Generate Daily Target</button>
+                <div id="results" class="hidden">
+                    <p>Water: <span id="water-target">0</span>L / day</p>
+                    <p>Protein: <span id="protein-target">0</span>g</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Contest Essentials</h3>
+                <ul class="checklist">
+                    <li><input type="checkbox"> Posing Practice (30 min)</li>
+                    <li><input type="checkbox"> Tanning Layer Check</li>
+                    <li><input type="checkbox"> Sodium/Potassium Balance</li>
+                    <li><input type="checkbox"> Stage Suit Fitted</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
